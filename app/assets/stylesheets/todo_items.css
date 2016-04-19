@@ -2,7 +2,9 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
-body {
+/*body {
   background: #333;
   color: #f7f7f7;
-}
+}*/
+
+img {text-align: center;}

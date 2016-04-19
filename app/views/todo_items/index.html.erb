@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
-
+<!-- <img src="/assets/rails.png" alt="rails" /> -->
+<%= image_tag 'rails.png' %>
 <h1>My To Do List</h1>
 
-<table>
+<table class="table table-striped table-condensed table-hover table-responsive">
   <thead>
     <tr>
       <th>Description</th>
@@ -14,9 +15,9 @@
     <% @todo_items.each do |todo_item| %>
       <tr>
         <td><%= todo_item.description %></td>
-        <td><%= link_to 'Show', todo_item %></td>
-        <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
-        <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', todo_item, class: "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_todo_item_path(todo_item),  class: "btn btn-default" %></td>
+        <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>

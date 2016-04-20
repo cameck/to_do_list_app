@@ -1,28 +1,31 @@
 <p id="notice"><%= notice %></p>
 <!-- <img src="/assets/rails.png" alt="rails" /> -->
-<%= image_tag 'rails.png' %>
+<!-- <%= image_tag 'rails.png' %> -->
 <h1>My To Do List</h1>
 
-<table class="table table-striped table-condensed table-hover table-responsive">
+<table id="to-do-table" class="table">
   <thead>
     <tr>
-      <th>Description</th>
+      <th>Tasks</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
+    
     <% @todo_items.each do |todo_item| %>
       <tr>
         <td><%= todo_item.description %></td>
-        <td><%= link_to 'Show', todo_item, class: "btn btn-default" %></td>
-        <td><%= link_to 'Edit', edit_todo_item_path(todo_item),  class: "btn btn-default" %></td>
-        <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-danger" %></td>
+        <td><%= link_to '<i class="fa fa-eye" aria-hidden="true"></i>'.html_safe, todo_item, class: "button" %></td>
+        <td><%= link_to '<i class="fa fa-pencil" aria-hidden="true"></i>
+'.html_safe, edit_todo_item_path(todo_item),  class: "button" %></td>
+        <td><%= link_to '<i class="fa fa-square-o" aria-hidden="true"></i>'.html_safe, todo_item, method: :delete, data: { confirm: 'Are you sure?' }, class: "button" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Todo item', new_todo_item_path %>
+<div class="container-fluid" id="add-item">
+  <%= link_to 'Add New', new_todo_item_path, class: "new-item btn btn-primary" %>
+</div>

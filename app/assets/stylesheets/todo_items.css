@@ -2,9 +2,99 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
-/*body {
-  background: #333;
+body {
+  background: url('to_do.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #f7f7f7;
-}*/
+  font-family: 'Raleway', sans-serif;
+}
 
 img {text-align: center;}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+a {
+  transition: .6s all;
+  position: relative;
+}
+
+.table a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #f7f7f7;
+  visibility: hidden;
+  /*-webkit-transform: scaleX(0);*/
+  transform: scaleX(0);
+  /*-webkit-transition: all 0.3s ease-in-out 0s;*/
+  transition: all 0.3s ease-in-out 0s;
+}
+a:hover {
+  background: transparent;
+  text-decoration: none;
+}
+
+.table a:hover::before {
+  visibility: visible;
+  /*-webkit-transform: scaleX(1);*/
+  transform: scaleX(1);
+}
+
+#to-do-table th,
+.field label {
+  display: inherit;
+  font-size: 2.3rem;
+}
+#to-do-table {
+  margin: 2em auto 0;
+  width: 75%;
+}
+
+#to-do-table a,
+a.new-item {
+  color: #f7f7f7;
+}
+
+#to-do-table td {
+  font-size: 1.3rem;
+}
+
+#add-item {
+  width: 75%;
+  padding-right: 0;
+}
+
+
+/*New Item page*/
+.new-item {
+  float: right;
+}
+
+a.back {
+  color: #f7f7f7;
+  float: right;
+}
+
+#todo_item_description {
+  color: #333;
+}
+
+#new_todo_item {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.field label {
+  margin-bottom: 0;
+}
+
+#notice {
+  color: #f7f7f7;
+  text-align: center;
+}

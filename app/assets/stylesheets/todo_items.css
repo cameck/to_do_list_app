@@ -76,9 +76,23 @@ a.new-item {
   float: right;
 }
 
+.rform {
+  height: 60vh;
+  text-align: center;
+}
+.rform::after,
+.rform::before {
+  height: 30vh;
+}
+#btn-left {
+  text-align: left;
+}
+
+#btn-right {
+  text-align: right;
+}
 a.back {
   color: #f7f7f7;
-  float: right;
 }
 
 #todo_item_description {
@@ -97,4 +111,46 @@ a.back {
 #notice {
   color: #f7f7f7;
   text-align: center;
+  font-style: italic;
+  font-size: 1.4rem;
+  margin-bottom: 1.9rem;
+}
+
+
+/*Show Page*/
+
+.show p,
+.show a,
+.show .btn {
+  color: #f7f7f7;
+  text-align: center;
+}
+
+.show p strong {
+  font-size: 2.5rem;
+}
+
+.show p + p {
+  font-size: 2.2rem;
+}
+.show {
+  height: 40vh;
+}
+.show::after {
+  height: 30vh;
+}
+
+.show::before {
+  height: 30vh;
+}
+.show div {
+  text-align: center;
+  margin-top: 1.4rem;
+}
+
+
+/*Edit Page*/
+
+a.btn-info {
+  color: #f7f7f7;
 }
